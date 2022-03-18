@@ -51,10 +51,14 @@ The page will reload if you make edits.<br />
 
 Note: This project will run the app even if linting fails.
 
-### `npm test`
+### `TESTING - Robert Lee's Exercise`
 #### Requires: NodeJS, Puppeteer, Mocha, and Chai
-#### `npm start` must be run prior to `npm test`
-Runs all E2E scripts (1) under the 'tests' folder.
+Steps to Run Exercise 
+1. Clone repository - `git clone https://github.com/Koodoit/ts-redux-react-realworld-example-app.git`
+2. Access the Puppeteer-Exercise branch - `git checkout Puppeteer-Exerise`
+3. `npm install`
+4. `npm start`
+5. Runs all E2E scripts (1) under the 'tests' folder. - `npm test`
 
 ### `npm run build`
 

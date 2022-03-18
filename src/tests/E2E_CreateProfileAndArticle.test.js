@@ -102,6 +102,7 @@ describe("Conduit - Create New Account and Post an Article", () => {
             console.log("FAILED: Cannot Navigate to Home Page")
             await page.screenshot({ path: "src/tests/Screenshots/fail/FAIL-Conduit_E2E01h_07_CLICK_Home_NavBar.png" });
             assert.fail(err);
+            return;
         }      
       });
 
@@ -117,6 +118,7 @@ describe("Conduit - Create New Account and Post an Article", () => {
             console.log("FAILED: Cannot Navigate to Global Feed")
             await page.screenshot({ path: "src/tests/Screenshots/fail/FAIL-Conduit_E2E01h_08_CLICK_GlobalFeed_Tab.png" });
             assert.fail(err);
+            return;
         }   
       });
 
