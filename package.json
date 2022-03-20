@@ -35,7 +35,7 @@
     "start": "cross-env DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "react-scripts build",
     "react-test": "react-scripts test",
-    "test": "mocha --timeout=20000 ./src/tests",
+    "test": "mocha --bail --timeout=8000 ./src/tests",
     "eject": "react-scripts eject",
     "prettier:check": "prettier --check src",
     "prettier": "prettier --write src",
