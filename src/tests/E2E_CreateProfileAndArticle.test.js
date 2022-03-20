@@ -111,6 +111,7 @@ describe("Conduit - Create New Account and Post an Article", () => {
     it('Conduit_E2E01h_07_CLICK_Home_NavBar', async () => {
     const [Home] = await page.$x("//a[@class='nav-link'][contains(., 'Home')]");
 
+<<<<<<< HEAD
     try {
         await Home.click();
         const PageTitle = await page.$eval("h1.logo-font", txt => txt.textContent); //Captures title from h1 banner
@@ -121,6 +122,20 @@ describe("Conduit - Create New Account and Post an Article", () => {
         assert.fail("Cannot load page home page or has recently changed.")
     }      
     });
+=======
+        try {
+            await Home.click();
+            //Validates the correct page gets displayed and takes screenshot
+            await page.waitForSelector(".btn-primary");
+            await page.screenshot({ path: "src/tests/Screenshots/pass/Conduit_E2E01h_07_CLICK_Home_NavBar.png" });
+        } catch(err) {
+            console.log("FAILED: Cannot Navigate to Home Page")
+            await page.screenshot({ path: "src/tests/Screenshots/fail/FAIL-Conduit_E2E01h_07_CLICK_Home_NavBar.png" });
+            assert.fail(err);
+            return;
+        }      
+      });
+>>>>>>> c43ed79d87d64bd52279adb518ef4f0d09bcfd40
 
       it('Conduit_E2E01h_08_CLICK_GlobalFeed_Tab', async () => {
         const [GlobalFeed] = await page.$x("//a[@class='nav-link'][contains(., 'Global Feed')]");
@@ -132,7 +147,12 @@ describe("Conduit - Create New Account and Post an Article", () => {
             await page.screenshot({ path: "src/tests/Screenshots/pass/Conduit_E2E01h_08_CLICK_GlobalFeed_Tab.png" });
         } catch(err) {
             await page.screenshot({ path: "src/tests/Screenshots/fail/FAIL-Conduit_E2E01h_08_CLICK_GlobalFeed_Tab.png" });
+<<<<<<< HEAD
             assert.fail("Cannot load `Global Feed` or has recently changed.")
+=======
+            assert.fail(err);
+            return;
+>>>>>>> c43ed79d87d64bd52279adb518ef4f0d09bcfd40
         }   
       });
 
